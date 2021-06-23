@@ -56,7 +56,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               tabname: "Guidlines"),
           bottomNavItem(
               icon: Icon(
-                Icons.grid_3x3_outlined,
+                Icons.menu,
                 color: Colors.grey,
               ),
               tabname: "Others"),

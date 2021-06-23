@@ -16,8 +16,10 @@ class _OthersState extends State<Others> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getAppBar(pageTitle: "Other"),
-       
+      appBar: getAppBar(
+        pageTitle: "Other",
+        height: MediaQuery.of(context).size.height,
+      ),
       body: ListView(
         children: [
           mainImage(),
