@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stock_details/view/constants/colors.dart';
+import 'package:stock_details/view/widgets/appBarWidget.dart';
 import 'package:stock_details/view/widgets/outlineRoundBut.dart';
 import 'package:stock_details/view/widgets/socialMRounBut.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,29 +16,8 @@ class _OthersState extends State<Others> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 80,
-        backgroundColor: primaryPurple,
-        flexibleSpace: Container(
-          height: 200,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color(0xFFD6939F),
-                Color(0xFF914BC2),
-              ],
-            ),
-          ),
-        ),
-        title: Center(
-          child: Text(
-            "Others",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
-      ),
+      appBar: getAppBar(pageTitle: "Other"),
+       
       body: ListView(
         children: [
           mainImage(),
