@@ -15,11 +15,18 @@ class Others extends StatefulWidget {
 class _OthersState extends State<Others> {
   @override
   Widget build(BuildContext context) {
+    final mediaquery = MediaQuery.of(context);
+
     return Scaffold(
-      appBar: getAppBar(
-        pageTitle: "Other",
-        height: MediaQuery.of(context).size.height,
-      ),
+      
+       appBar: getAppBar(
+          pageTitle: 'Guidelines',
+          height: mediaquery.size.height,
+        ),
+      // appBar: getAppBar(
+      //   pageTitle: "Other",
+      //   height: MediaQuery.of(context).size.height,
+      // ),
       body: ListView(
         children: [
           mainImage(),
