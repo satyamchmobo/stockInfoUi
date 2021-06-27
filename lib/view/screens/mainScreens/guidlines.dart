@@ -15,6 +15,7 @@ class Guidlines extends StatefulWidget {
 }
 
 class _GuidlinesState extends State<Guidlines> {
+  
   @override
   Widget build(BuildContext context) {
     final mediaquery = MediaQuery.of(context);
