@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stock_details/view/constants/colors.dart';
@@ -30,7 +28,7 @@ class _NamesState extends State<Names> {
     return Scaffold(
       appBar: getAppBar(
         pageTitle: "Other", height: 600,
-       // height: MediaQuery.of(context).size.height,
+        // height: MediaQuery.of(context).size.height,
       ),
       body: Column(
         children: [
@@ -40,7 +38,7 @@ class _NamesState extends State<Names> {
               left: 15,
               right: 15,
             ),
-            child: _buildChoiceChipsForMonths(),
+            child: _buildChoiceChipsForToFilters(),
           ),
           //  Text('fdfdfdddddddddddddddd'),
           Expanded(
@@ -343,7 +341,6 @@ class _NamesState extends State<Names> {
                     ),
                   ),
                 ),
-
                 Divider(),
                 Container(
                   color: Colors.white,
@@ -645,14 +642,13 @@ class _NamesState extends State<Names> {
             ),
           ),
 
-
-                  subscribeUi()
+          subscribeUi()
         ],
       ),
     );
   }
 
-  Widget _buildChoiceChipsForMonths() {
+  Widget _buildChoiceChipsForToFilters() {
     return Container(
       height: 66,
       child: SingleChildScrollView(
@@ -691,6 +687,7 @@ class _NamesState extends State<Names> {
                             if (selected == true) {
                               setState(() {
                                 topFilttersIndex = index;
+                               String  selected= topFiltters[topFilttersIndex];
                               });
                               chipBorderColor = primaryPurple;
                             } else {
@@ -1369,8 +1366,6 @@ Widget tileContents() {
             ],
           ),
         ),
-
-
       ],
     ),
   );
@@ -1378,35 +1373,25 @@ Widget tileContents() {
 
 Widget subscribeUi() {
   return Container(
-     height: 80,
-    width:350,
-    decoration :BoxDecoration(
-      border : Border.all(
-         width: 1,
-        color:Color(0xFFE5CFE7)),
-     
-      borderRadius: BorderRadius.circular(5)
-      ),
-
-  
-
-    child:Padding(
-      padding: const EdgeInsets.symmetric(horizontal:15,vertical: 10),
-      child: Container(
-      height: 60,
-      width:250,
-      child: RaisedButton(
-        textColor: Colors.white,
-        color: primaryPurple,
-        child: Text('Subscribe to View More'),
-        onPressed: () {},
-        shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(5.0),
+      height: 80,
+      width: 350,
+      decoration: BoxDecoration(
+          border: Border.all(width: 1, color: Color(0xFFE5CFE7)),
+          borderRadius: BorderRadius.circular(5)),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        child: Container(
+          height: 60,
+          width: 250,
+          child: RaisedButton(
+            textColor: Colors.white,
+            color: primaryPurple,
+            child: Text('Subscribe to View More'),
+            onPressed: () {},
+            shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(5.0),
+            ),
+          ),
         ),
-      ),
-  ),
-    )
-
-
-  );
+      ));
 }
